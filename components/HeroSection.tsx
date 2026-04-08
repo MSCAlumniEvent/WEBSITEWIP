@@ -66,15 +66,14 @@ export default function HeroSection({
         <>
           <div className="absolute inset-0 bg-navy" />
           <video
+            key="hero-video"
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
-            poster={asset('/images/header_bg.jpg')}
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={asset('/video/WebsiteHeader.hevc.mp4')} type="video/mp4; codecs=hvc1" />
             <source src={asset('/video/WebsiteHeader.h264.mp4')} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-navy/50" />
