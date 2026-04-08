@@ -66,7 +66,6 @@ export default function HeroSection({
       {/* Background */}
       {video ? (
         <>
-          <div className="absolute inset-0 bg-navy" />
           <video
             key="hero-video"
             autoPlay
