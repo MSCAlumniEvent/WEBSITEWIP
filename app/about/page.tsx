@@ -4,6 +4,7 @@ import ContactSection from '@/components/ContactSection';
 import BoardGrid from '@/components/BoardGrid';
 import ConsultantGrid from '@/components/ConsultantGrid';
 import { boardMembers, consultants, getContactPerson } from '@/data/team';
+import { asset } from '@/lib/assetPath';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -19,7 +20,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/hero-board-2.jpg)' }}
+          style={{ backgroundImage: `url(${asset('/images/hero-board-2.jpg')})` }}
         />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">

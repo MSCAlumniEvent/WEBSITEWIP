@@ -6,6 +6,7 @@ import EventSlider from '@/components/EventSlider';
 import { getContactPerson } from '@/data/team';
 import { memberTestimonials, alumniTestimonials } from '@/data/testimonials';
 import { studentInsights } from '@/data/clients';
+import { asset } from '@/lib/assetPath';
 
 export const metadata: Metadata = {
   title: 'Students',
@@ -57,7 +58,7 @@ export default function StudentsPage() {
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/hero-consultants-all.png)' }}
+          style={{ backgroundImage: `url(${asset('/images/hero-consultants-all.png')})` }}
         />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
@@ -111,7 +112,7 @@ export default function StudentsPage() {
       <section className="relative py-20 sm:py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/europe-map.jpg)' }}
+          style={{ backgroundImage: `url(${asset('/images/europe-map.jpg')})` }}
         />
         <div className="absolute inset-0 bg-navy/85" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -153,7 +154,7 @@ export default function StudentsPage() {
       <section className="relative py-20 sm:py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/hero-board-standing.jpg)' }}
+          style={{ backgroundImage: `url(${asset('/images/hero-board-standing.jpg')})` }}
         />
         <div className="absolute inset-0 bg-navy/85" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">

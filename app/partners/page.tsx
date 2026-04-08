@@ -7,6 +7,7 @@ import EventSlider from '@/components/EventSlider';
 import { getContactPerson } from '@/data/team';
 import { partnerTestimonials } from '@/data/testimonials';
 import { partnerLogos, partnerEvents } from '@/data/clients';
+import { asset } from '@/lib/assetPath';
 
 export const metadata: Metadata = {
   title: 'Partners',
@@ -52,7 +53,7 @@ export default function PartnersPage() {
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/hero-partners-hands.jpg)' }}
+          style={{ backgroundImage: `url(${asset('/images/hero-partners-hands.jpg')})` }}
         />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">

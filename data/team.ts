@@ -52,7 +52,7 @@ export const consultants: Consultant[] = [
   { name: 'Jonathan Altmann', image: '/images/consultants/Jonathan Altmann.jpeg' },
   { name: 'Ada Volkmann', image: '/images/consultants/Ada.jpeg' },
   { name: 'Casper van Marrewijk', image: '/images/consultants/Casper v. m.jpeg' },
-  { name: 'Ari Mühlthaler', image: '/images/consultants/Ari Mühlthaler 2.jpg' },
+  { name: 'Ari Mühlthaler', image: '/images/consultants/Ari Mühlthaler.jpeg' },
   { name: 'Caspar Kleinewiese', image: '/images/consultants/Caspar Kleinewiese.jpeg' },
   { name: 'Tiphaine Reynaud', image: '/images/consultants/Tiphaine.jpeg' },
 ];

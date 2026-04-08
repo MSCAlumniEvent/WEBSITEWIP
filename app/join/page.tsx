@@ -4,6 +4,7 @@ import ContactSection from '@/components/ContactSection';
 import CountdownTimer from '@/components/CountdownTimer';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import { getContactPerson } from '@/data/team';
+import { asset } from '@/lib/assetPath';
 
 export const metadata: Metadata = {
   title: 'Join Us',
@@ -42,7 +43,7 @@ export default function JoinPage() {
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/hero-board-1.jpg)' }}
+          style={{ backgroundImage: `url(${asset('/images/hero-board-1.jpg')})` }}
         />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
@@ -72,7 +73,7 @@ export default function JoinPage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/become-team-new.png)' }}
+          style={{ backgroundImage: `url(${asset('/images/become-team-new.png')})` }}
         />
         <div className="absolute inset-0 bg-black/20" />
 

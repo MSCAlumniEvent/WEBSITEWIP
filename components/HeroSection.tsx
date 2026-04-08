@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { asset } from '@/lib/assetPath';
 
 interface HeroSectionProps {
   heading: string;
@@ -70,7 +71,7 @@ export default function HeroSection({
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/video/WebsiteHeader.mp4" type="video/mp4" />
+            <source src={asset('/video/WebsiteHeader.mp4')} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-navy/50" />
         </>
@@ -78,7 +79,7 @@ export default function HeroSection({
         <>
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
+            style={{ backgroundImage: `url(${asset(backgroundImage)})` }}
           />
           <div className="absolute inset-0 bg-navy/55" />
         </>
