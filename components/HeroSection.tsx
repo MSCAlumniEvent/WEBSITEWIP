@@ -26,13 +26,13 @@ function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) 
           hasAnimated.current = true;
           const duration = 1800;
           const start = performance.now();
-          function tick(now: number) {
+          const tick = (now: number) => {
             const elapsed = now - start;
             const progress = Math.min(elapsed / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
             setCount(Math.round(eased * target));
             if (progress < 1) requestAnimationFrame(tick);
-          }
+          };
           requestAnimationFrame(tick);
         }
       },
