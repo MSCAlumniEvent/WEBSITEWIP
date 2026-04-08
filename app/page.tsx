@@ -78,6 +78,7 @@ export default function HomePage() {
                   src={card.image}
                   alt={card.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 {/* Default state: gradient + title */}

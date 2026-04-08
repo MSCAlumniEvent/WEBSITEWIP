@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from '@/components/SafeImage';
 import { asset } from '@/lib/assetPath';
 
 interface HeroSectionProps {
@@ -80,9 +81,13 @@ export default function HeroSection({
         </>
       ) : (
         <>
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${asset(backgroundImage)})` }}
+          <Image
+            src={backgroundImage}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-navy/55" />
         </>

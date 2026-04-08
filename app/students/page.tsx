@@ -6,7 +6,6 @@ import EventSlider from '@/components/EventSlider';
 import { getContactPerson } from '@/data/team';
 import { memberTestimonials, alumniTestimonials } from '@/data/testimonials';
 import { studentInsights } from '@/data/clients';
-import { asset } from '@/lib/assetPath';
 
 export const metadata: Metadata = {
   title: 'Students',
@@ -56,9 +55,13 @@ export default function StudentsPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${asset('/images/hero-consultants-all.jpg')})` }}
+        <Image
+          src="/images/hero-consultants-all.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
@@ -110,9 +113,12 @@ export default function StudentsPage() {
 
       {/* What We Expect */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${asset('/images/europe-map.jpg')})` }}
+        <Image
+          src="/images/europe-map.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-navy/85" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -152,9 +158,12 @@ export default function StudentsPage() {
 
       {/* Alumni */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${asset('/images/hero-board-standing.jpg')})` }}
+        <Image
+          src="/images/hero-board-standing.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-navy/85" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -170,7 +179,7 @@ export default function StudentsPage() {
               <div key={t.author} className="bg-white rounded-xl overflow-hidden flex flex-col h-full hover:scale-[1.03] hover:shadow-xl transition-all duration-300 cursor-default">
                 {t.image && (
                   <div className="relative h-56">
-                    <Image src={t.image} alt={t.author} fill className="object-cover object-top" />
+                    <Image src={t.image} alt={t.author} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-top" />
                   </div>
                 )}
                 <div className="p-7 sm:p-8 flex flex-col flex-grow">
