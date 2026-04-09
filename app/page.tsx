@@ -12,18 +12,21 @@ const cards = [
     image: '/images/hero-board-2.jpg',
     href: '/clients',
     text: 'MSC provides advisory for start-ups, small to medium sized enterprises and corporate business units. Our mission is to deliver thoughtful, creative and out of the box solutions that help your business achieve long-term improvement.',
+    imageClassName: 'scale-[1.25] object-[center_40%]',
   },
   {
     title: 'Partners',
     image: '/images/card-partners.jpg',
     href: '/partners',
     text: "Helping our partners achieve better visibility in their industry is an integral part of our mission. Through workshops and other relevant and customised events, you will have an unmatched opportunity to reach Maastricht's most talented pool of students.",
+    imageClassName: '',
   },
   {
     title: 'Students',
     image: '/images/card-students.png',
     href: '/students',
     text: 'As a top-tier student with an inquiring mind, you are always looking for ways to take your knowledge further? Discover the practical side of your academic knowledge and join us as a student consultant. With MSC, your education has real-life value.',
+    imageClassName: '',
   },
 ];
 
@@ -79,7 +82,7 @@ export default function HomePage() {
                   alt={card.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
+                  className={`object-cover ${card.imageClassName ?? ''}`}
                 />
                 {/* Default state: gradient + title */}
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent transition-opacity duration-300 group-hover:opacity-0" />
