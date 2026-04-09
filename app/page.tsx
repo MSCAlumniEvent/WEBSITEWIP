@@ -12,7 +12,7 @@ const cards = [
     image: '/images/hero-board-2.jpg',
     href: '/clients',
     text: 'MSC provides advisory for start-ups, small to medium sized enterprises and corporate business units. Our mission is to deliver thoughtful, creative and out of the box solutions that help your business achieve long-term improvement.',
-    imageClassName: 'scale-[1.25] object-[center_40%]',
+    imageClassName: '!-left-[18%] !-right-[18%] !w-[136%] !max-w-none',
   },
   {
     title: 'Partners',
@@ -81,6 +81,7 @@ export default function HomePage() {
                   src={card.image}
                   alt={card.title}
                   fill
+                  quality={100}
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className={`object-cover ${card.imageClassName ?? ''}`}
                 />
