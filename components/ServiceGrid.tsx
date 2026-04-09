@@ -1,7 +1,6 @@
 'use client';
 
 import Image from '@/components/SafeImage';
-import Link from 'next/link';
 
 interface Service {
   title: string;
@@ -60,15 +59,9 @@ function ServiceCard({ service }: { service: Service }) {
 
       {/* Hover state: navy overlay with text + learn more */}
       <div className="absolute inset-0 z-20 bg-navy/90 flex flex-col items-center justify-center px-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <p className="text-white/90 text-sm leading-relaxed mb-6 max-w-md">
+        <p className="text-white/90 text-sm leading-relaxed max-w-md">
           {service.text}
         </p>
-        <Link
-          href="/clients#contact"
-          className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-navy transition-colors"
-        >
-          Learn more
-        </Link>
       </div>
     </div>
   );

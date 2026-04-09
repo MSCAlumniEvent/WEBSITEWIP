@@ -4,15 +4,18 @@ import { Logo } from '@/data/clients';
 interface LogoGridProps {
   logos: Logo[];
   largerLogos?: string[];
+  smallerLogos?: string[];
   removeBackground?: string[];
 }
 
-export default function LogoGrid({ logos, largerLogos = [], removeBackground = [] }: LogoGridProps) {
+export default function LogoGrid({ logos, largerLogos = [], smallerLogos = [], removeBackground = [] }: LogoGridProps) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-items-center">
       {logos.map((logo) => {
         const isLarger = largerLogos.includes(logo.name);
+        const isSmaller = smallerLogos.includes(logo.name);
         const removeBg = removeBackground.includes(logo.name);
+        const heightClass = isLarger ? 'max-h-[5.5rem]' : isSmaller ? 'max-h-10' : 'max-h-16';
         return (
           <div
             key={logo.name}
@@ -24,7 +27,7 @@ export default function LogoGrid({ logos, largerLogos = [], removeBackground = [
                 alt={logo.name}
                 width={200}
                 height={80}
-                className={`w-auto object-contain ${isLarger ? 'max-h-[5.5rem]' : 'max-h-16'}${removeBg ? ' mix-blend-multiply' : ''}`}
+                className={`w-auto object-contain ${heightClass}${removeBg ? ' mix-blend-multiply' : ''}`}
               />
             ) : (
               <span className="text-navy/40 text-sm font-medium text-center">
