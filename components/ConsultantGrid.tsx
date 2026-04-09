@@ -32,6 +32,7 @@ export default function ConsultantGrid({ consultants }: ConsultantGridProps) {
               src={consultant.image}
               alt={consultant.name}
               fill
+              quality={100}
               className={`object-cover ${consultant.imageClassName ?? ''}`}
               sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 20vw"
             />

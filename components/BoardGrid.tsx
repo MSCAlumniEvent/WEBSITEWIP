@@ -15,6 +15,7 @@ export default function BoardGrid({ members }: BoardGridProps) {
               src={member.image}
               alt={member.name}
               fill
+              quality={100}
               sizes="(max-width: 640px) 40vw, (max-width: 1024px) 22vw, 180px"
               className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
             />
