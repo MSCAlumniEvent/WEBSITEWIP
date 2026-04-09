@@ -42,7 +42,7 @@ export default function ConsultantGrid({ consultants }: ConsultantGridProps) {
 
           {/* Blue slide-up overlay */}
           <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-full bg-navy/75 transition-all duration-500 ease-in-out flex items-end justify-center overflow-hidden">
-            <p className="text-white text-sm sm:text-base lg:text-lg font-semibold text-center px-3 pb-6 whitespace-nowrap">
+            <p className="text-white text-xs sm:text-sm lg:text-base font-semibold text-center px-2 pb-4 sm:pb-6 leading-tight">
               {consultant.name}
             </p>
           </div>
