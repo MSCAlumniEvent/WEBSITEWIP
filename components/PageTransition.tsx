@@ -1,27 +1,29 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [opacity, setOpacity] = useState(1);
+  const [visible, setVisible] = useState(true);
+  const isFirst = useRef(true);
 
   useEffect(() => {
-    setOpacity(0);
+    // Skip fade on initial page load
+    if (isFirst.current) {
+      isFirst.current = false;
+      return;
+    }
+    setVisible(false);
     window.scrollTo(0, 0);
-    const frame = requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        setOpacity(1);
-      });
-    });
-    return () => cancelAnimationFrame(frame);
+    // Wait one frame for opacity:0 to paint, then fade in
+    const t = setTimeout(() => setVisible(true), 50);
+    return () => clearTimeout(t);
   }, [pathname]);
 
   return (
     <div
-      className="transition-opacity duration-300 ease-in-out"
-      style={{ opacity }}
+      className={`transition-opacity duration-500 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'}`}
     >
       {children}
     </div>
