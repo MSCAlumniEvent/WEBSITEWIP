@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import CountdownTimer from '@/components/CountdownTimer';
+import ApplicationCTA from '@/components/ApplicationCTA';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson } from '@/data/team';
@@ -82,27 +83,7 @@ export default function JoinPage() {
         />
         <div className="absolute inset-0 bg-black/20" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Become part of our team!</h2>
-          <p className="text-lg text-white/70 font-medium mb-12">Applications open soon!</p>
-
-          <CountdownTimer />
-
-          <div className="mt-16">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">Join our Talent Pool!</h3>
-            <a
-              href="https://share.hsforms.com/1yHE7gOeARfCHRoYV-gvY7Qbw4n1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-orange hover:bg-orange/90 text-white px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide transition-all duration-200"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-              </svg>
-              Talent Pool
-            </a>
-          </div>
-        </div>
+        <ApplicationCTA />
       </section>
 
       {/* Application Procedure */}

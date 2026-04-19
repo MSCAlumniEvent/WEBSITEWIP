@@ -16,6 +16,15 @@ const config: Config = {
       fontFamily: {
         sans: ['Avenir', 'Avenir Next', 'system-ui', 'sans-serif'],
       },
+      animation: {
+        'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
+      },
+      keyframes: {
+        'bounce-slow': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
+      },
     },
   },
   plugins: [],
