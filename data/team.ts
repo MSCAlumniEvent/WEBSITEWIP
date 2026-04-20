@@ -42,7 +42,7 @@ export const consultants: Consultant[] = [
   { name: 'Julian Kuni', image: '/images/consultants/Julian Kuni.jpg' },
   { name: 'Arthur von Moltke', image: '/images/consultants/Arthur-von-Moltke.jpg', wrapperClassName: 'scale-[0.85] origin-center' },
   { name: 'Ida Gloede', image: '/images/consultants/Ida Gloede.jpg' },
-  { name: 'Benjamin Ganovsky', image: '/images/consultants/Ben Ganovsky.jpg' },
+  { name: 'Benjamin Ganvoszky', image: '/images/consultants/Ben Ganovsky.jpg' },
   { name: 'Maxim Franko', image: '/images/consultants/Maxim Franko.jpg' },
   { name: 'Simon Kley', image: '/images/consultants/Simon Kley.jpg' },
   { name: 'Mona Stiegemeier', image: '/images/consultants/Mona Stiegemeier.jpg' },
