@@ -219,7 +219,7 @@ export default function AlumniEventClient() {
 
       {/* ── SCHEDULE ── */}
       <section id="schedule" className="py-20 sm:py-28" style={{ background: '#f8f8fa' }}>
-        <div className="max-w-3xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="ae-animate text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-3">Schedule</h2>
             <div className="section-divider mx-auto" />
@@ -272,7 +272,7 @@ export default function AlumniEventClient() {
             <h3 className="text-xl font-bold text-navy mb-5">Venues</h3>
             <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/alumni-event/map.png" alt="Venue map of Maastricht" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src={`/images/alumni-event/map.png?v=${Date.now()}`} alt="Venue map of Maastricht" style={{ width: '100%', height: 'auto', display: 'block', minHeight: '500px', objectFit: 'cover' }} />
             </div>
           </div>
         </div>
